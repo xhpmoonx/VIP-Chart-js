@@ -1,0 +1,209 @@
+
+/* === Base === */
+body {
+  font-family: system-ui, sans-serif;
+  background: #f8fafc;
+  padding: 40px;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 200px;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.main-content {
+  overflow: auto;
+  padding: 40px;
+  position: relative;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(8, 200px);
+  grid-template-rows: repeat(7, 100px) auto;
+  gap: 20px;
+  position: relative;
+  width: max-content;
+}
+
+/* === Course Boxes === */
+.course {
+  background: transparent;
+  box-shadow: none;
+  padding: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.label {
+  font-size: 0.85em;
+  color: #0f172a;
+  text-align: center;
+}
+
+/* === Unified Shape Class === */
+.shape {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  margin-bottom: 6px;
+  background: yellow;
+  border: 3px solid #ef4444;
+  color: black;
+}
+.shape.example {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    background: yellow;
+    border: 3px solid #ef4444;
+  }
+  
+  /* Apply shapes based on data-type wrapper */
+  [data-type="core"] .shape.example {
+    border-radius: 50%;
+  }
+  
+  [data-type="ge"] .shape.example {
+    border-radius: 8px;
+  }
+  
+  [data-type="elective"] .shape.example {
+    border-radius: 999px;
+    width: 60px;
+    height: 28px;
+  }
+  
+  [data-type="capstone"] .shape.example {
+    border: 5px solid #ef4444;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    width: 40px;
+    height: 40px;
+  }
+  
+  
+  
+/* === Shape Styles by Course Type === */
+.course[data-type="core"] .shape {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.course[data-type="ge"] .shape {
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+}
+
+.course[data-type="elective"] .shape {
+  width: 60px;
+  height: 28px;
+  border-radius: 999px;
+}
+
+.course[data-type="capstone"] .shape {
+    width: 45px;
+    height: 45px;
+    background: yellow;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    border: 5px solid #ef4444;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: black;
+    font-size: 0.9em;
+    box-sizing: border-box;
+  }
+  
+  
+/* === Hover State === */
+.course:hover .shape {
+  border-color: #3b82f6;
+  box-shadow: 0 0 8px rgba(59, 130, 246, 0.5);
+}
+
+/* === Active Course === */
+.course.active .shape {
+  background: #fef08a;
+  border-color: #3b82f6;
+}
+
+/* === Highlights === */
+.course.direct-blocked .shape {
+  background: #e0f2fe;
+  border-color: #1a835b;
+}
+
+.course.indirect-blocked .shape {
+  background: #f0f9ff;
+  border-color: #70a3e0;
+}
+
+.course.dependency .shape {
+  background: #fde68a;
+  border-color: #381a04;
+}
+
+/* === Metrics Highlights === */
+.course.high-blocking .shape {
+  border-color: #10b981 !important;
+  background: #d1fae5;
+}
+
+.course.high-delay .shape {
+  border-color: #3b82f6 !important;
+  background: #dbeafe;
+}
+
+.course.high-complexity .shape {
+  border-color: #9333ea !important;
+  background: #e9d5ff;
+}
+
+/* === Dimming === */
+.grid.dimmed .course:not(.active) .shape {
+  background-color: #f1f5f9;
+  color: #94a3b8;
+  opacity: 0.3;
+  box-shadow: none;
+}
+.grid.dimmed .arrow:not(.highlighted) {
+  opacity: 0.1;
+}
+
+/* === Arrows === */
+.arrow {
+  stroke: #ef4444;
+  stroke-width: 2.5;
+  fill: none;
+  transition: stroke 0.2s ease, opacity 0.2s ease;
+  opacity: 0.3;
+}
+.arrow.highlighted {
+  stroke: #3b82f6;
+  opacity: 1;
+}
+
+/* === Popup === */
+.popup {
+  position: absolute;
+  background: white;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 0.85em;
+  color: #0f172a;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  pointer-events: none;
+  z-index: 20;
+  display: none;
+  white-space: nowrap;
+}

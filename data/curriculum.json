@@ -1,0 +1,441 @@
+[
+  {
+    "id": "math101",
+    "label": "MATH 101\nCalculus I",
+    "units": 4,
+    "type": "core",
+    "term": 1,
+    "row": 2,
+    "prereqs": [],
+    "metrics": {
+      "complexity": 9,
+      "delay": 1,
+      "blocking": 3,
+      "centrality": 0.24
+    }
+  },
+  {
+    "id": "engr101",
+    "label": "ENGR 101\nIntro to Eng",
+    "units": 4,
+    "type": "core",
+    "term": 1,
+    "row": 3,
+    "prereqs": [],
+    "metrics": {
+      "complexity": 8,
+      "delay": 5,
+      "blocking": 5,
+      "centrality": 0.86
+    }
+  },
+  {
+    "id": "ge1",
+    "label": "GE 1\nWriting",
+    "units": 4,
+    "type": "ge",
+    "term": 1,
+    "row": 4,
+    "prereqs": [],
+    "metrics": {
+      "complexity": 8,
+      "delay": 6,
+      "blocking": 7,
+      "centrality": 0.95
+    }
+  },
+  {
+    "id": "ge-math",
+    "label": "GE MATH\nReasoning",
+    "units": 4,
+    "type": "ge",
+    "term": 1,
+    "row": 5,
+    "prereqs": [],
+    "metrics": {
+      "complexity": 4,
+      "delay": 1,
+      "blocking": 0,
+      "centrality": 0.48
+    }
+  },
+  {
+    "id": "ge-hist",
+    "label": "GE HIST\nUS History",
+    "units": 4,
+    "type": "ge",
+    "term": 1,
+    "row": 6,
+    "prereqs": [],
+    "metrics": {
+      "complexity": 9,
+      "delay": 0,
+      "blocking": 6,
+      "centrality": 0.36
+    }
+  },
+  {
+    "id": "phys101",
+    "label": "PHYS 101\nPhysics I",
+    "units": 4,
+    "type": "core",
+    "term": 2,
+    "row": 2,
+    "prereqs": [
+      "math101"
+    ],
+    "metrics": {
+      "complexity": 2,
+      "delay": 1,
+      "blocking": 2,
+      "centrality": 0.84
+    }
+  },
+  {
+    "id": "cs101",
+    "label": "CS 101\nIntro to CS",
+    "units": 4,
+    "type": "core",
+    "term": 2,
+    "row": 3,
+    "prereqs": [
+      "engr101"
+    ],
+    "metrics": {
+      "complexity": 9,
+      "delay": 3,
+      "blocking": 0,
+      "centrality": 0.07
+    }
+  },
+  {
+    "id": "ge2",
+    "label": "GE 2\nEthics",
+    "units": 4,
+    "type": "ge",
+    "term": 2,
+    "row": 4,
+    "prereqs": [],
+    "metrics": {
+      "complexity": 1,
+      "delay": 6,
+      "blocking": 2,
+      "centrality": 0.03
+    }
+  },
+  {
+    "id": "bio101",
+    "label": "BIO 101\nBiology I",
+    "units": 4,
+    "type": "elective",
+    "term": 2,
+    "row": 5,
+    "prereqs": [],
+    "metrics": {
+      "complexity": 4,
+      "delay": 2,
+      "blocking": 4,
+      "centrality": 0.76
+    }
+  },
+  {
+    "id": "engr102",
+    "label": "ENGR 102\nDesign Lab",
+    "units": 4,
+    "type": "core",
+    "term": 3,
+    "row": 2,
+    "prereqs": [
+      "cs101"
+    ],
+    "metrics": {
+      "complexity": 6,
+      "delay": 3,
+      "blocking": 4,
+      "centrality": 0.74
+    }
+  },
+  {
+    "id": "ge3",
+    "label": "GE 3\nHumanities",
+    "units": 4,
+    "type": "ge",
+    "term": 3,
+    "row": 3,
+    "prereqs": [],
+    "metrics": {
+      "complexity": 2,
+      "delay": 2,
+      "blocking": 8,
+      "centrality": 0.61
+    }
+  },
+  {
+    "id": "math102",
+    "label": "MATH 102\nCalculus II",
+    "units": 4,
+    "type": "core",
+    "term": 3,
+    "row": 5,
+    "prereqs": [
+      "math101"
+    ],
+    "metrics": {
+      "complexity": 10,
+      "delay": 3,
+      "blocking": 2,
+      "centrality": 0.43
+    }
+  },
+  {
+    "id": "stat201",
+    "label": "STAT 201\nProbability",
+    "units": 4,
+    "type": "core",
+    "term": 4,
+    "row": 2,
+    "prereqs": [
+      "phys101"
+    ],
+    "metrics": {
+      "complexity": 8,
+      "delay": 3,
+      "blocking": 7,
+      "centrality": 0.73
+    }
+  },
+  {
+    "id": "ge4",
+    "label": "GE 4\nCommunication",
+    "units": 4,
+    "type": "ge",
+    "term": 4,
+    "row": 3,
+    "prereqs": [],
+    "metrics": {
+      "complexity": 3,
+      "delay": 3,
+      "blocking": 6,
+      "centrality": 0.78
+    }
+  },
+  {
+    "id": "stat202",
+    "label": "STAT 202\nInferential Stats",
+    "units": 4,
+    "type": "core",
+    "term": 4,
+    "row": 5,
+    "prereqs": [
+      "math102"
+    ],
+    "metrics": {
+      "complexity": 8,
+      "delay": 5,
+      "blocking": 6,
+      "centrality": 0.04
+    }
+  },
+  {
+    "id": "math201",
+    "label": "MATH 201\nLinear Algebra",
+    "units": 4,
+    "type": "core",
+    "term": 5,
+    "row": 2,
+    "prereqs": [
+      "stat201"
+    ],
+    "metrics": {
+      "complexity": 1,
+      "delay": 4,
+      "blocking": 3,
+      "centrality": 0.38
+    }
+  },
+  {
+    "id": "cs201",
+    "label": "CS 201\nData Structures",
+    "units": 4,
+    "type": "core",
+    "term": 5,
+    "row": 3,
+    "prereqs": [
+      "cs101"
+    ],
+    "metrics": {
+      "complexity": 6,
+      "delay": 1,
+      "blocking": 6,
+      "centrality": 0.54
+    }
+  },
+  {
+    "id": "cs220",
+    "label": "CS 220\nDatabases",
+    "units": 4,
+    "type": "elective",
+    "term": 5,
+    "row": 5,
+    "prereqs": [
+      "stat202"
+    ],
+    "metrics": {
+      "complexity": 10,
+      "delay": 2,
+      "blocking": 0,
+      "centrality": 0.56
+    }
+  },
+  {
+    "id": "cs202",
+    "label": "CS 202\nAlgorithms",
+    "units": 4,
+    "type": "core",
+    "term": 6,
+    "row": 2,
+    "prereqs": [
+      "cs201",
+      "math201"
+    ],
+    "metrics": {
+      "complexity": 7,
+      "delay": 5,
+      "blocking": 0,
+      "centrality": 0.64
+    }
+  },
+  {
+    "id": "ge5",
+    "label": "GE 5\nSociety",
+    "units": 4,
+    "type": "ge",
+    "term": 6,
+    "row": 3,
+    "prereqs": [],
+    "metrics": {
+      "complexity": 5,
+      "delay": 4,
+      "blocking": 3,
+      "centrality": 0.16
+    }
+  },
+  {
+    "id": "cs221",
+    "label": "CS 221\nAI Concepts",
+    "units": 4,
+    "type": "capstone",
+    "term": 6,
+    "row": 5,
+    "prereqs": [
+      "cs220",
+      "math230"
+    ],
+    "metrics": {
+      "complexity": 12,
+      "delay": 2,
+      "blocking": 4,
+      "centrality": 0.15
+    }
+  },
+  {
+    "id": "engr201",
+    "label": "ENGR 201\nSystems Design",
+    "units": 4,
+    "type": "core",
+    "term": 7,
+    "row": 2,
+    "prereqs": [
+      "cs202"
+    ],
+    "metrics": {
+      "complexity": 7,
+      "delay": 1,
+      "blocking": 7,
+      "centrality": 0.45
+    }
+  },
+  {
+    "id": "math202",
+    "label": "MATH 202\nDifferential Eq.",
+    "units": 4,
+    "type": "core",
+    "term": 7,
+    "row": 3,
+    "prereqs": [
+      "math102"
+    ],
+    "metrics": {
+      "complexity": 8,
+      "delay": 6,
+      "blocking": 2,
+      "centrality": 0.58
+    }
+  },
+  {
+    "id": "math230",
+    "label": "MATH 230\nDiscrete Math",
+    "units": 4,
+    "type": "core",
+    "term": 7,
+    "row": 5,
+    "prereqs": [
+      "math101"
+    ],
+    "metrics": {
+      "complexity": 7,
+      "delay": 1,
+      "blocking": 8,
+      "centrality": 0.45
+    }
+  },
+  {
+    "id": "capstone",
+    "label": "CAPSTONE\nProject",
+    "units": 4,
+    "type": "capstone",
+    "term": 8,
+    "row": 2,
+    "prereqs": [
+      "math202",
+      "engr201",
+      "cs221"
+    ],
+    "metrics": {
+      "complexity": 12,
+      "delay": 3,
+      "blocking": 2,
+      "centrality": 0.78
+    }
+  },
+  {
+    "id": "ge6",
+    "label": "GE 6\nGlobal Studies",
+    "units": 4,
+    "type": "ge",
+    "term": 8,
+    "row": 3,
+    "prereqs": [],
+    "metrics": {
+      "complexity": 8,
+      "delay": 0,
+      "blocking": 1,
+      "centrality": 0.14
+    }
+  },
+  {
+    "id": "ethics300",
+    "label": "ETHICS 300\nEngineering Ethics",
+    "units": 4,
+    "type": "ge",
+    "term": 8,
+    "row": 5,
+    "prereqs": [],
+    "metrics": {
+      "complexity": 12,
+      "delay": 0,
+      "blocking": 6,
+      "centrality": 0.93
+    }
+  }
+]

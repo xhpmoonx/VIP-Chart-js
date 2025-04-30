@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+            <title>Curriculum Graph - VIP Course</title>
+            <link rel="stylesheet" href="css/styles.css" />
+    </head>
+<body>
+
+  <div class="layout">
+    <div class="main-content">
+      <div id="popup" class="popup"></div>
+  
+      <div class="grid" id="curriculum">
+        <svg id="svg" width="1000" height="800">
+          <defs>
+            <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5"
+              markerWidth="4" markerHeight="4" orient="auto">
+            </marker>
+          </defs>
+        </svg>
+      </div>
+    </div>
+  
+    <div class="key">
+   <!-- === KEY TITLE === -->
+<div style="font-weight: 600; font-size: 0.9em; color: #334155; margin-bottom: 12px;">
+  Course Flow Key
+</div>
+<!-- 🔽 Metric Highlight Mode -->
+<div style="margin: 12px 0 20px;">
+    <label for="metric-mode" style="font-size: 0.85em; font-weight: 500; color: #475569;">Highlight by:</label><br>
+    <select id="metric-mode" style="margin-top: 6px; width: 100%; padding: 6px; font-size: 0.9em;">
+      <option value="none">None</option>
+      <option value="blocking">Blocking ≥ 6</option>
+      <option value="delay">Delay ≥ 4</option>
+      <option value="complexity">Complexity ≥ 8</option>
+    </select>
+  </div>
+  
+
+<!-- === HOVER STATES === -->
+<div style="font-size: 0.85em; color: #475569; font-weight: 500; margin: 18px 0 6px;">
+  Course Path Colors
+</div>
+<ul>
+  <li style="display: flex; align-items: center; margin-bottom: 8px;">
+    <div data-type="core"><div class="shape example" style="background: #fef08a; border-color: #3b82f6; box-shadow: 0 0 6px rgba(59,130,246,0.5);"></div></div>
+    Hovered Course (Yellow)
+  </li>
+  <li style="display: flex; align-items: center; margin-bottom: 8px;">
+    <div data-type="core"><div class="shape example" style="background: #d1fae5; border-color: #1a835b;"></div></div>
+    Directly Blocked (Green)
+  </li>
+  <li style="display: flex; align-items: center; margin-bottom: 8px;">
+    <div data-type="core"><div class="shape example" style="background: #dbeafe; border-color: #70a3e0;"></div></div>
+    Indirectly Blocked (Blue)
+  </li>
+  <li style="display: flex; align-items: center; margin-bottom: 8px;">
+    <div data-type="core"><div class="shape example" style="background: #fef3c7; border-color: #381a04;"></div></div>
+    Prerequisite (Dark Red Border)
+  </li>
+</ul>
+
+
+<!-- === COURSE TYPES === -->
+<div style="font-size: 0.85em; color: #475569; font-weight: 500; margin: 10px 0 6px;">
+  Course Types
+</div>
+<ul>
+  <li style="display: flex; align-items: center; margin-bottom: 8px;">
+    <div data-type="core"><div class="shape example"></div></div>
+    Core Course
+  </li>
+  <li style="display: flex; align-items: center; margin-bottom: 8px;">
+    <div data-type="ge"><div class="shape example"></div></div>
+    GE Course
+  </li>
+  <li style="display: flex; align-items: center; margin-bottom: 8px;">
+    <div data-type="elective"><div class="shape example"></div></div>
+    Elective Course
+  </li>
+  <li style="display: flex; align-items: center; margin-bottom: 8px;">
+    <div data-type="capstone"><div class="shape example"></div></div>
+    Capstone
+  </li>
+</ul>
+
+
+
+<!-- === ARROW MEANINGS === -->
+<div style="font-size: 0.85em; color: #475569; font-weight: 500; margin: 18px 0 6px;">
+  Arrow Types
+</div>
+<ul>
+  <li style="margin-bottom: 8px;"><span class="key-line prereq"></span> Prerequisite Path</li>
+  <li><span class="key-line blocked"></span> Highlighted Dependency</li>
+</ul>
+
+    </div>
+  </div>
+<script type="module" src="js/app.js"></script>
+</body>
+</html>
